@@ -1,0 +1,203 @@
+/*-----------------------------------------------------
+	Font Import
+-----------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/*-----------------------------------------------------
+	Variables definition
+-----------------------------------------------------*/
+
+:root {
+    --txt-primary: hsl(237, 12%, 33%);
+    --txt-secundary: hsl(240, 6%, 50%);
+
+    --accent-primary: hsl(238, 29%, 16%);
+    --accent-secundary: hsl(14, 88%, 65%);
+
+    --bg-primary: hsl(0, 0%, 100%);
+    --bg-secundary: hsl(273, 75%, 66%);
+    --bg-tertiary: hsl(240, 73%, 65%);
+
+    --divider: hsl(240, 5%, 91%);
+}
+
+/*-----------------------------------------------------
+	Global styling
+-----------------------------------------------------*/
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 9.5rem 1.5rem 5rem 1.5rem;
+    background-image: linear-gradient(180deg, var(--bg-secundary), var(--bg-tertiary));
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 60rem;
+    padding: 8.5rem 1.5rem 3rem 1.5rem;
+    border-radius: 1.3rem;
+    background-color: var(--bg-primary);
+    box-shadow: 7px 37px 28px -6px rgba(55, 55, 174, 0.75);
+    -webkit-box-shadow: 7px 37px 28px -6px rgba(55, 55, 174, 0.75);
+    -moz-box-shadow: 7px 37px 28px -6px rgba(55, 55, 174, 0.75);
+}
+
+.card__box-illustration {
+    display: none;
+}
+
+.card__box-illustration {
+    position: absolute;
+}
+
+.card__illustrations {
+    position: absolute;
+    top: -7rem;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.card__illustrations::after {
+    content: "";
+    position: absolute;
+    top: 4.7rem;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+}
+
+.card__women-illustration {
+    width: 75%;
+    margin-inline: auto;
+}
+
+/* Styling for the title of the faq component */
+
+.card__title {
+    margin-bottom: .75rem;
+    color: var(--accent-primary);
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card__title-abbreviation {
+    text-decoration: none;
+}
+
+/* Styling for the element which contains the question and answer */
+
+.faq {
+    width: 100%;
+    max-width: 23rem;
+    padding: 1.1rem 0;
+    border-bottom: .1rem solid var(--divider);
+}
+
+/* Question styling */
+
+.faq__question {
+    position: relative;
+    color: var(--txt-primary);
+    font-size: clamp(.83rem, 3vw, 1rem);
+    font-weight: 400;
+    list-style: none;
+    transition: color .25s ease-in-out;
+}
+
+.faq__question::after {
+    content: url(../images/icon-arrow-down.svg);
+    position: absolute;
+    bottom: 0.1rem;
+    right: 0;
+    transition: all .25s ease-in-out;
+}
+
+/* Change the color of the question on hover */
+
+.faq__question:hover {
+    color: var(--accent-secundary);
+}
+
+/* Change the font color and weight of the question when the element with class faq__box has the open attribute */
+
+.faq[open] .faq__question {
+    color: var(--accent-primary);
+    font-weight: 700;
+}
+
+/* Rotate the arrow icon on the right side of the question when the element with class faq__box has the open attribute */
+
+.faq[open] .faq__question::after {
+    transform: rotate(180deg) translateY(-.1rem);
+}
+
+/* Answer styling */
+
+.faq__answer {
+    padding-right: 1.9rem;
+    margin-top: 1.1rem;
+    color: var(--txt-secundary);
+    font-size: clamp(.76rem, 3vw, 1rem);
+    font-weight: 400;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+}
+
+.faq[open] .faq__answer {
+    opacity: 1;
+}
+
+.footer {
+    padding: 1rem;
+    background-color: var(--bg-primary);
+}
+
+.footer__text {
+    color: var(--txt-secundary);
+    font-size: .87rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.footer__link {
+    color: var(--txt-primary);
+    text-decoration: none;
+    transition: color .25s ease-in-out;
+}
+
+.footer__link:hover {
+    color: var(--accent-secundary);
+}
+
+@media (min-width: 1440px) {
+    .card__box-illustration {
+        display: block;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Specifies the name of the author of the document -->
+  <meta name="author" content="MrGeminus">
+  <!-- Specifies a brief description of the page shown in search engine results -->
+  <meta name="description" content="This is a solution to the calculator app challenge on Frontend Mentor. 
+  The calculator is available in three color themes and can perform simple mathematical operations like addition, 
+  subtraction, multiplication, and division.">
+  <!-- Specifies list of keywords relevant to the page -->
+  <meta name="keywords" content="HTML5, Accessibility, BEM, CSS3, Mobile-first, Front-End, Frontend Mentor">
+  <!-- Displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Sets the favicon -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <!-- Imports the stylesheet from the css folder -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Difines the title of the document shown in the browser's title bar, page's tab, search engine results, etc. -->
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
+
+<body>
+  <main class="main">
+    <article class="card">
+      <img class="card__box-illustration" src="/images/illustration-box-desktop.svg"
+        alt="An orange cube with an @ symbol on top">
+      <picture class="card__women-illustrations">
+        <source media="(max-width:1440px)" srcset="/images/illustration-woman-online-mobile.svg">
+        <img class="card__women-illustration" src="/images/illustration-woman-online-desktop.svg"
+          alt="Green haired woman in orange high heels standing on the purple base and looking at an orange monitor">
+      </picture>
+      <picture class="card__shadow-illustrations">
+        <source media="(max-width:1440px)" srcset="/images/bg-pattern-desktop.svg">
+        <img class="card__women-illustration" src="/images/bg-pattern-mobile.svg"
+          alt="Shadow of the above purple base on which the woman is standing">
+      </picture>
+      <div class="card__text-wrapper">
+        <h1 class="card__title"><abbr class="card__title-abbreviation" title="Frequently Asked Questions">Faq</abbr>
+        </h1>
+        <details class="faq">
+          <summary class="faq__question">How many team members can I invite?</summary>
+          <p class="faq__answer">You can invite up to 2 additional users on the Free plan. There is no limit on
+            team members for the Premium plan.</p>
+        </details>
+        <details class="faq">
+          <summary class="faq__question">What is the maximum file upload size?</summary>
+          <p class="faq__answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+        </details>
+        <details class="faq">
+          <summary class="faq__question">How do I reset my password?</summary>
+          <p class="faq__answer">Click “Forgot password” from the login page or “Change password” from your profile
+            page.
+            A reset link will be emailed to you.</p>
+        </details>
+        <details class="faq">
+          <summary class="faq__question">Can I cancel my subscription?</summary>
+          <p class="faq__answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+        </details>
+        <details class="faq">
+          <summary class="faq__question">Do you provide additional support?</summary>
+          <p class="faq__answer">Chat and email support is available 24/7. Phone lines are open during normal business
+            hours.</p>
+        </details>
+      </div>
+    </article>
+  </main>
+  <!-- Page footer -->
+  <footer class="footer">
+    <p class="footer__text">
+      Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        rel="noopener noreferrer external">Frontend
+        Mentor</a>.
+      Coded by <a class="footer__link" href="https://github.com/MrGeminus" target="_blank"
+        rel="noopener noreferrer external">MrGeminus</a>.
+    </p>
+  </footer>
+</body>
+
+</html>

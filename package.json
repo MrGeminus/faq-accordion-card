@@ -1,0 +1,39 @@
+{
+  "name": "faq-accordion-card",
+  "version": "1.0.0",
+  "author": {
+    "name": "MrGeminus",
+    "email": "contact@mrgeminus.com",
+    "url": "http://mrgeminus.com/"
+  },
+  "description": "This is a solution to the FAQ accordion card challenge on Frontend Mentor.",
+  "keywords": [
+    "HTML5",
+    "Accessibility",
+    "BEM",
+    "CSS3",
+    "Mobile-first",
+    "Front-End",
+    "Frontend Mentor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrGeminus/faq-accordion-card.git"
+  },
+  "homepage": "https://github.com/MrGeminus/faq-accordion-card#readme",
+  "bugs": {
+    "url": "https://github.com/MrGeminus/faq-accordion-card/issues",
+    "email": "support@mrgeminus.com"
+  },
+  "license": "MIT",
+  "funding": [
+    {
+      "type": "Buy Me A Coffee",
+      "url": "https://www.buymeacoffee.com/mrgeminus"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/my-account"
+    }
+  ]
+}

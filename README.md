@@ -28,12 +28,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./preview.png)
+![](https://mrgeminus.github.io/faq-accordion-card/blob/main/preview.png?raw=true)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://mrgeminus.github.io/faq-accordion-card/](https://mrgeminus.github.io/faq-accordion-card/)
 
 ## My process
 
@@ -47,12 +47,31 @@ Users should be able to:
 
 ### What I learned
 
+While working on this project, I have discovered the experimental :has() CSS Selector.
+
+It’s essentially a parent selector, although far more useful than just that.
+
+In the below example, I utilize it to select and move the box illustration which is located inside an element with the class of card if the card contains a element without the open attribute that is directly followed by a hovered element with the class of faq__question.
+
+``
+`css`
+
+.card:has(:not(.faq[open]) > .faq__question:hover) > .card__box-illustration {
+        transform: translateX(-1.9rem);
+    }
+
+``
+
+The browser support currently isn't the greatest, but that may change in the future.
+
 ### Continued development
+
+I would definitely like to further improve in areas of accessibility and semantics.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [details and summary](https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [:has() browser support](https://caniuse.com/?search=%3Ahas) - Here you can see the current browser support for this CSS Selector.
 
 ## Author
 

@@ -2,18 +2,22 @@
 <html lang="en">
 
 <head>
+  <!-- Specifies the character encoding for the HTML document -->
   <meta charset="UTF-8">
   <!-- Specifies the name of the author of the document -->
   <meta name="author" content="MrGeminus">
   <!-- Specifies a brief description of the page shown in search engine results -->
-  <meta name="description" content="This is a solution to the calculator app challenge on Frontend Mentor. 
-  The calculator is available in three color themes and can perform simple mathematical operations like addition, 
-  subtraction, multiplication, and division.">
+  <meta name="description" content="This is a solution to the FAQ accordion card challenge on Frontend Mentor">
   <!-- Specifies list of keywords relevant to the page -->
   <meta name="keywords" content="HTML5, Accessibility, BEM, CSS3, Mobile-first, Front-End, Frontend Mentor">
   <!-- Displays site properly based on user's device -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Sets the favicon -->
+  <!-- Determines how the website is going to be embedded into other websites -->
+  <meta property="og:url" content="https://mrgeminus.github.io/faq-accordion-card/">
+  <meta property="og:title" content="Frontend Mentor | FAQ Accordion Card">
+  <meta property="og:description" content="This is a solution to the FAQ accordion card challenge on Frontend Mentor">
+  <meta property="og:image" content="https://mrgeminus.github.io/faq-accordion-card/blob/main/preview.png?raw=true">
+  <!-- Sets the favicon shown in the page's tab-->
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <!-- Imports the stylesheet from the css folder -->
   <link rel="stylesheet" href="css/styles.css">
@@ -22,31 +26,42 @@
 </head>
 
 <body>
+  <!-- Page main content -->
   <main class="main">
+    <!-- Article element was used for the card component because it makes sense on its own and it's possible to distribute it independently from the rest of the site -->
     <article class="card">
       <img class="card__box-illustration" src="/images/illustration-box-desktop.svg"
         alt="An orange cube with an @ symbol on top">
-      <picture class="card__women-illustrations">
-        <source media="(max-width:1440px)" srcset="/images/illustration-woman-online-mobile.svg">
-        <img class="card__women-illustration" src="/images/illustration-woman-online-desktop.svg"
+      <!-- Picture element was used because of multiple variations of the same illustration. The first source that fits the preferences is the one being used -->
+      <picture class="card__woman-illustrations">
+        <source media="(max-width:1150px)" srcset="/images/illustration-woman-online-mobile.svg">
+        <img class="card__woman-illustration" src="/images/illustration-woman-online-desktop.svg"
           alt="Green haired woman in orange high heels standing on the purple base and looking at an orange monitor">
       </picture>
       <picture class="card__shadow-illustrations">
-        <source media="(max-width:1440px)" srcset="/images/bg-pattern-desktop.svg">
-        <img class="card__women-illustration" src="/images/bg-pattern-mobile.svg"
+        <source media="(max-width:1150px)" srcset="/images/bg-pattern-mobile.svg">
+        <img class="card__shadow-illustration" src="/images/bg-pattern-desktop.svg"
           alt="Shadow of the above purple base on which the woman is standing">
       </picture>
-      <div class="card__text-wrapper">
-        <h1 class="card__title"><abbr class="card__title-abbreviation" title="Frequently Asked Questions">Faq</abbr>
+      <!-- Wrapper used to align the title and accordions to the left on desktop screens -->
+      <div>
+        <!-- Card title -->
+        <h1 class="card__title">
+          <!-- Abbr tag defines the faq abbreviation because not everyone knows what that means -->
+          <abbr class="card__abbreviation" title="Frequently Asked Questions">Faq</abbr>
         </h1>
+        <!-- Details tag specifies additional details that the user can open and close on demand -->
         <details class="faq">
+          <!-- Summary tag defines a visible heading for the <details> element. The heading can be clicked to view/hide the details. -->
           <summary class="faq__question">How many team members can I invite?</summary>
+          <!-- The p tag contains the answer to the question that will be shown when the user clicks on the summary -->
           <p class="faq__answer">You can invite up to 2 additional users on the Free plan. There is no limit on
             team members for the Premium plan.</p>
         </details>
         <details class="faq">
           <summary class="faq__question">What is the maximum file upload size?</summary>
-          <p class="faq__answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          <p class="faq__answer">No more than 2<abbr class="card__abbreviation" title="Gigabyte">GB</abbr>. All files in
+            your account must fit your allotted storage space.</p>
         </details>
         <details class="faq">
           <summary class="faq__question">How do I reset my password?</summary>
@@ -66,14 +81,14 @@
       </div>
     </article>
   </main>
-  <!-- Page footer -->
+  <!-- Footer portion of the page -->
   <footer class="footer">
+    <!-- Footer attribution text -->
     <p class="footer__text">
-      Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        rel="noopener noreferrer external">Frontend
-        Mentor</a>.
-      Coded by <a class="footer__link" href="https://github.com/MrGeminus" target="_blank"
-        rel="noopener noreferrer external">MrGeminus</a>.
+      <!-- Span tag are purely used for positioning -->
+      <span>Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          rel="noopener noreferrer external">Frontend Mentor</a>.</span><span>Coded by <a class="footer__link"
+          href="https://github.com/MrGeminus" target="_blank" rel="noopener noreferrer external">MrGeminus</a>.</span>
     </p>
   </footer>
 </body>

@@ -20,6 +20,8 @@
     --bg-tertiary: hsl(240, 73%, 65%);
 
     --divider: hsl(240, 5%, 91%);
+
+    --shadow: hsla(240, 52%, 45%, 0.75)
 }
 
 /*-----------------------------------------------------
@@ -52,48 +54,45 @@ body {
 
 .card {
     position: relative;
+    display: flex;
     width: 100%;
-    max-width: 60rem;
+    max-width: fit-content;
     padding: 8.5rem 1.5rem 3rem 1.5rem;
     border-radius: 1.3rem;
     background-color: var(--bg-primary);
-    box-shadow: 7px 37px 28px -6px rgba(55, 55, 174, 0.75);
-    -webkit-box-shadow: 7px 37px 28px -6px rgba(55, 55, 174, 0.75);
-    -moz-box-shadow: 7px 37px 28px -6px rgba(55, 55, 174, 0.75);
+    box-shadow: .44rem 2.3rem 1.75rem -.37rem var(--shadow);
+    -webkit-box-shadow: .44rem 2.3rem 1.75rem -.37rem var(--shadow);
+    -moz-box-shadow: .44rem 2.3rem 1.75rem -.37rem var(--shadow);
 }
 
 .card__box-illustration {
     display: none;
 }
 
-.card__box-illustration {
+.card__woman-illustrations {
     position: absolute;
-}
-
-.card__illustrations {
-    position: absolute;
-    top: -7rem;
+    top: -7.3rem;
     left: 0;
     right: 0;
     display: flex;
 }
 
-.card__illustrations::after {
-    content: "";
-    position: absolute;
-    top: 4.7rem;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background-image: url("../images/bg-pattern-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 75%;
+.card__woman-illustration {
+    width: 75%;
+    margin: 0 auto;
 }
 
-.card__women-illustration {
+.card__shadow-illustrations {
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.card__shadow-illustration {
     width: 75%;
-    margin-inline: auto;
+    margin: 0 auto;
 }
 
 /* Styling for the title of the faq component */
@@ -107,15 +106,13 @@ body {
     text-transform: uppercase;
 }
 
-.card__title-abbreviation {
+.card__abbreviation {
     text-decoration: none;
 }
 
 /* Styling for the element which contains the question and answer */
 
 .faq {
-    width: 100%;
-    max-width: 23rem;
     padding: 1.1rem 0;
     border-bottom: .1rem solid var(--divider);
 }
@@ -124,10 +121,12 @@ body {
 
 .faq__question {
     position: relative;
+    padding-right: 2.1rem;
     color: var(--txt-primary);
-    font-size: clamp(.83rem, 3vw, 1rem);
+    font-size: .83rem;
     font-weight: 400;
     list-style: none;
+    cursor: pointer;
     transition: color .25s ease-in-out;
 }
 
@@ -161,17 +160,20 @@ body {
 /* Answer styling */
 
 .faq__answer {
-    padding-right: 1.9rem;
-    margin-top: 1.1rem;
+    max-width: 15.7rem;
+    margin-top: 0.6rem;
     color: var(--txt-secundary);
-    font-size: clamp(.76rem, 3vw, 1rem);
+    font-size: .75rem;
     font-weight: 400;
+    line-height: 1.5;
     opacity: 0;
-    transition: opacity .25s ease-in-out;
+    transform: translateX(-10px);
+    transition: all .45s ease-in-out;
 }
 
 .faq[open] .faq__answer {
     opacity: 1;
+    transform: translateX(0)
 }
 
 .footer {
@@ -180,6 +182,9 @@ body {
 }
 
 .footer__text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     color: var(--txt-secundary);
     font-size: .87rem;
     font-weight: 400;
@@ -196,8 +201,77 @@ body {
     color: var(--accent-secundary);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 450px) {
+    .footer__text span:last-child {
+        margin-left: 0.2rem;
+    }
+}
+
+@media (min-width: 1150px) {
+    .card {
+        justify-content: flex-end;
+        max-width: 55rem;
+        padding: 5rem;
+    }
+
     .card__box-illustration {
+        position: absolute;
+        top: 42.5%;
+        left: -5.1rem;
         display: block;
+        width: 10.5rem;
+        transition: all .25s ease-in-out;
+        z-index: 3;
+    }
+
+    /* */
+
+    .card:has(:not(.faq[open]) > .faq__question:hover) > .card__box-illustration {
+        transform: translateX(-1.9rem);
+    }
+
+    .card__woman-illustrations {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 50%;
+        overflow: hidden;
+    }
+
+    .card__woman-illustration {
+        width: 100%;
+        margin: auto auto auto -5rem;
+        z-index: 2;
+    }
+
+    .card__shadow-illustrations {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 50%;
+        overflow: hidden;
+    }
+
+    .card__shadow-illustration {
+        position: absolute;
+        width: 200%;
+        margin: -53% auto auto -32.3rem;
+        z-index: 1;
+    }
+
+    .card__title {
+        text-align: start;
+    }
+
+    .faq__question {
+        padding-right: 7rem;
+    }
+
+    .faq__question::after {
+        right: 1rem;
+    }
+
+    .faq__answer {
+        max-width: 19.9rem;
     }
 }

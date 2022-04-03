@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 /*-----------------------------------------------------
-	Variables definition
+	Variables Definition
 -----------------------------------------------------*/
 
 :root {
@@ -25,7 +25,7 @@
 }
 
 /*-----------------------------------------------------
-	Global styling
+	Global Styling
 -----------------------------------------------------*/
 
 *,
@@ -200,6 +200,10 @@ body {
 .footer__link:hover {
     color: var(--accent-secundary);
 }
+
+/*-----------------------------------------------------
+	Media Queries
+-----------------------------------------------------*/
 
 @media (min-width: 450px) {
     .footer__text span:last-child {

@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](https://mrgeminus.github.io/faq-accordion-card/blob/main/preview.png?raw=true)
+![Project preview image](preview.png?raw=true)
 
 ### Links
 
@@ -47,20 +47,21 @@ Users should be able to:
 
 ### What I learned
 
-While working on this project, I have discovered the experimental :has() CSS Selector.
+While working on this project, I have learned about the experimental :has() CSS Selector.
 
 It’s essentially a parent selector, although far more useful than just that.
 
-In the below example, I utilize it to select and move the box illustration which is located inside an element with the class of card if the card contains a element without the open attribute that is directly followed by a hovered element with the class of faq__question.
+In the below example, I utilize it to select and move the box illustration which is located inside an element with the class of card if that card contains an element without an open attribute that is directly followed by a hovered element with the class of faq__question.
 
-``
-`css`
+```css
 
 .card:has(:not(.faq[open]) > .faq__question:hover) > .card__box-illustration {
         transform: translateX(-1.9rem);
     }
 
-``
+```
+
+If the browser doesn't support the selector this rule will be ignored and the box won't move on the page.
 
 The browser support currently isn't the greatest, but that may change in the future.
 
@@ -70,8 +71,10 @@ I would definitely like to further improve in areas of accessibility and semanti
 
 ### Useful resources
 
-- [details and summary](https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [:has() browser support](https://caniuse.com/?search=%3Ahas) - Here you can see the current browser support for this CSS Selector.
+- [Docs for details and summary element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) - Everything about the details and summary element
+- [Details element styling issues](https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/) - This article addresses two styling issues of the details element.
+- [:has() browser support](https://caniuse.com/?search=%3Ahas) - A useful browser support checking tool for CSS properties.
+- [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/) - List of tools that can be used for accessibility evaluation.
 
 ## Author
 

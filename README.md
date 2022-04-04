@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/made-with-html-and-css-with-focus-on-accessibility-and-semantics-BJwVK_DQ9](https://www.frontendmentor.io/solutions/made-with-html-and-css-with-focus-on-accessibility-and-semantics-BJwVK_DQ9)
 - Live Site URL: [https://mrgeminus.github.io/faq-accordion-card/](https://mrgeminus.github.io/faq-accordion-card/)
 
 ## My process

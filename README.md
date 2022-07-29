@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Project preview image](preview.png?raw=true)
+![Project preview image](screenshots/preview.png?raw=true)
 
 ### Links
 
@@ -71,12 +71,14 @@ I would definitely like to further improve in areas of accessibility and semanti
 
 ### Useful resources
 
-- [Docs for details and summary element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) - Everything about the details and summary element
+- [About details and summary element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) - Everything about the details and summary element
 - [Details element styling issues](https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/) - This article addresses two styling issues of the details element.
 - [:has() browser support](https://caniuse.com/?search=%3Ahas) - A useful browser support checking tool for CSS properties.
-- [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/) - List of tools that can be used for accessibility evaluation.
+- [Accessibility Testing Tools](https://www.w3.org/WAI/ER/tools/) - Here you can find a list of tools that you can use to check how accessible your website is.
 
 ## Author
 
 - Website - [MrGeminus](https://mrgeminus.com/)
 - Frontend Mentor - [@MrGeminus](https://www.frontendmentor.io/profile/MrGeminus)
+- YouTube - [MrGeminus](https://www.youtube.com/channel/UC4QYa0Pb5OCidee70BWbtAA)
+- Twitter - [@MrGeminus](https://twitter.com/MrGeminus)

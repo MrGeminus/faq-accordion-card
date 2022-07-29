@@ -16,9 +16,9 @@
   <meta property="og:url" content="https://mrgeminus.github.io/faq-accordion-card/">
   <meta property="og:title" content="Frontend Mentor | FAQ Accordion Card">
   <meta property="og:description" content="This is a solution to the FAQ accordion card challenge on Frontend Mentor">
-  <meta property="og:image" content="preview.png?raw=true">
+  <meta property="og:image" content="screenshots/preview.png?raw=true">
   <!-- Sets the favicon shown in the page's tab-->
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <!-- Imports the stylesheet from the css folder -->
   <link rel="stylesheet" href="css/styles.css">
   <!-- Difines the title of the document shown in the browser's title bar, page's tab, search engine results, etc. -->
@@ -30,21 +30,21 @@
   <main class="main">
     <!-- Article element was used for the card component because it makes sense on its own and it's possible to distribute it independently from the rest of the site -->
     <article class="card">
-      <img class="card__box-illustration" src="images/illustration-box-desktop.svg?raw=true"
+      <img class="card__box-illustration" src="assets/img/illustration-box-desktop.svg?raw=true"
         alt="An orange cube with an @ symbol on top">
       <!-- Picture element was used because of multiple variations of the same illustration. The first source that fits the preferences is the one being used -->
       <picture class="card__woman-illustrations">
-        <source media="(max-width:1150px)" srcset="images/illustration-woman-online-mobile.svg?raw=true">
-        <img class="card__woman-illustration" src="images/illustration-woman-online-desktop.svg?raw=true"
+        <source media="(max-width:1150px)" srcset="assets/img/illustration-woman-online-mobile.svg?raw=true">
+        <img class="card__woman-illustration" src="assets/img/illustration-woman-online-desktop.svg?raw=true"
           alt="Green haired woman in orange high heels standing on the purple base and looking at an orange monitor">
       </picture>
       <picture class="card__shadow-illustrations">
-        <source media="(max-width:1150px)" srcset="images/bg-pattern-mobile.svg?raw=true">
-        <img class="card__shadow-illustration" src="images/bg-pattern-desktop.svg?raw=true"
+        <source media="(max-width:1150px)" srcset="assets/img/bg-pattern-mobile.svg?raw=true">
+        <img class="card__shadow-illustration" src="assets/img/bg-pattern-desktop.svg?raw=true"
           alt="Shadow of the above purple base on which the woman is standing">
       </picture>
       <!-- Wrapper used to align the title and accordions to the left on desktop screens -->
-      <div>
+      <div class="card__body">
         <!-- Card title -->
         <h1 class="card__title">
           <!-- Abbr tag defines the faq abbreviation because not everyone knows what that means -->
@@ -58,7 +58,7 @@
           <p class="faq__answer">You can invite up to 2 additional users on the Free plan. There is no limit on
             team members for the Premium plan.</p>
         </details>
-        <details class="faq">
+        <details class="faq" open>
           <summary class="faq__question">What is the maximum file upload size?</summary>
           <p class="faq__answer">No more than 2<abbr class="card__abbreviation" title="Gigabyte">GB</abbr>. All files in
             your account must fit your allotted storage space.</p>
@@ -84,11 +84,9 @@
   <!-- Footer portion of the page -->
   <footer class="footer">
     <!-- Footer attribution text -->
-    <p class="footer__text">
-      <!-- Span tags are purely used for positioning -->
-      <span>Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          rel="noopener noreferrer external">Frontend Mentor</a>.</span><span>Coded by <a class="footer__link"
-          href="https://github.com/MrGeminus" target="_blank" rel="noopener noreferrer external">MrGeminus</a>.</span>
+    <p class="footer__text">Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank" rel="noopener noreferrer external">Frontend Mentor</a>. Coded by <a class="footer__link"
+        href="https://github.com/MrGeminus" target="_blank" rel="noopener noreferrer external">MrGeminus</a>.
     </p>
   </footer>
 </body>

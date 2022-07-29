@@ -52,7 +52,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    padding: 9.5rem 1.5rem 5rem 1.5rem;
+    padding: 33% 1.5rem 5rem 1.5rem;
     background-image: linear-gradient(180deg, var(--bg-secundary), var(--bg-tertiary));
 }
 
@@ -62,8 +62,8 @@ body {
     position: relative;
     display: flex;
     width: 100%;
-    max-width: fit-content;
-    padding: 8.5rem 1.5rem 3rem 1.5rem;
+    max-width: 57rem;
+    padding: 41% 1.5rem 3rem 1.5rem;
     border-radius: 1.3rem;
     background-color: var(--bg-primary);
     box-shadow: .44rem 2.3rem 1.75rem -.37rem var(--shadow);
@@ -79,7 +79,7 @@ body {
 
 .card__woman-illustrations {
     position: absolute;
-    top: -7.3rem;
+    top: 0;
     left: 0;
     right: 0;
     display: flex;
@@ -87,12 +87,13 @@ body {
 
 .card__woman-illustration {
     width: 75%;
-    margin: 0 auto;
+    margin: -34% auto 0 auto;
+    transition: all .25s ease-in-out;
 }
 
 .card__shadow-illustrations {
     position: absolute;
-    top: 0rem;
+    top: 0;
     left: 0;
     right: 0;
     display: flex;
@@ -100,7 +101,12 @@ body {
 
 .card__shadow-illustration {
     width: 75%;
-    margin: 0 auto;
+    margin: 1% auto 0 auto;
+    transition: all .25s ease-in-out;
+}
+
+.card__body {
+    width: 100%;
 }
 
 /* Card title styling */
@@ -123,6 +129,7 @@ body {
 /* Styling for the elements which contain the questions and answers */
 
 .faq {
+    width: 100%;
     padding: 1.1rem 0;
     border-bottom: .1rem solid var(--divider);
 }
@@ -172,9 +179,9 @@ content from the right side of the element with class faq__answer */
 /* Styling for the arrow icon inside the element with the class faq__question */
 
 .faq__question::after {
-    content: url(../images/icon-arrow-down.svg);
+    content: url(../assets/img/icon-arrow-down.svg);
     position: absolute;
-    bottom: 0.1rem;
+    top: -0.1rem;
     right: 0;
     transition: all .25s ease-in-out;
 }
@@ -182,7 +189,7 @@ content from the right side of the element with class faq__answer */
 /* Answer styling */
 
 .faq__answer {
-    max-width: 15.7rem;
+    padding-right: 1.3rem;
     margin-top: 0.6rem;
     color: var(--txt-secundary);
     font-size: .75rem;
@@ -205,9 +212,6 @@ content from the right side of the element with class faq__answer */
 /* Footer text styling */
 
 .footer__text {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     color: var(--txt-secundary);
     font-size: .87rem;
     font-weight: 400;
@@ -232,20 +236,61 @@ content from the right side of the element with class faq__answer */
 	Media Queries
 -----------------------------------------------------*/
 
-@media (min-width: 390px) {
+@media (max-width: 360px) {
+    .faq__question {
+        padding-right: 1.3rem;
+        font-size: .75rem;
+    }
 
-    /* Separating the two spans inside the footer */
+    .footer__text {
+        font-size: .75rem;
+    }
+}
 
-    .footer__text span:last-child {
-        margin-left: 0.2rem;
+@media (min-width: 790px) {
+    .main {
+        padding: 5rem 1.5rem 5rem 1.5rem;
+    }
+
+    .card {
+        justify-content: flex-end;
+        padding: 4.3rem 5rem 5rem 3rem;
+    }
+
+    .card__woman-illustrations {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 55%;
+    }
+
+    .card__woman-illustration {
+        width: 100%;
+        margin: auto auto auto 0;
+    }
+
+    .card__shadow-illustrations {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 55%;
+    }
+
+    .card__shadow-illustration {
+        position: absolute;
+        width: 100%;
+        margin: 68% auto auto 0;
+    }
+
+    .card__body {
+        width: 45%;
     }
 }
 
 @media (min-width: 1150px) {
     .card {
         justify-content: flex-end;
-        max-width: 57rem;
-        padding: 5rem;
+        padding: 4.3rem 5rem 5rem 3rem;
     }
 
     .card__box-illustration {
@@ -300,7 +345,8 @@ content from the right side of the element with class faq__answer */
     }
 
     .faq__question {
-        padding-right: 7rem;
+        font-size: .87rem;
+        padding-right: 5rem;
     }
 
     .faq__question::after {
@@ -308,6 +354,6 @@ content from the right side of the element with class faq__answer */
     }
 
     .faq__answer {
-        max-width: 19.9rem;
+        padding-right: 2.1rem;
     }
 }
